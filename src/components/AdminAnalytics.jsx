@@ -16,7 +16,7 @@ const AdminAnalytics = () => {
     const fetchAnalytics = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await fetch('http://localhost:5000/api/orders/analytics', {
+        const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/orders/analytics', {
             headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();

@@ -18,7 +18,7 @@ const OrderTracking = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/orders/${id}`, {
+        const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/orders/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
@@ -45,7 +45,7 @@ const OrderTracking = () => {
     
     setProcessingReturn(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/${order._id}/return-request`, {
+      const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/orders/${order._id}/return-request`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',

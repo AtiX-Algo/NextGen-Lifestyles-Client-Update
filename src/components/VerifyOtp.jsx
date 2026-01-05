@@ -25,7 +25,7 @@ const VerifyOtp = () => {
     try {
       console.log("Sending Data:", { email, otp }); // Debug Log
 
-      const response = await fetch('http://localhost:5000/api/auth/verify', {
+      const response = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/auth/verify', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp }),

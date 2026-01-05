@@ -17,7 +17,7 @@ const AdminCoupons = () => {
   /*FETCH COUPONS*/
   const fetchCoupons = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/coupons');
+      const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/coupons');
       const data = await res.json();
       setCoupons(data);
     } catch (err) {
@@ -32,7 +32,7 @@ const AdminCoupons = () => {
 
     const loadCoupons = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/coupons');
+        const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/coupons');
         const data = await res.json();
         if (isMounted) setCoupons(data);
       } catch (err) {
@@ -58,7 +58,7 @@ const AdminCoupons = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const res = await fetch('http://localhost:5000/api/coupons/create', {
+      const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/coupons/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ const AdminCoupons = () => {
     const token = localStorage.getItem('token');
 
     try {
-      const res = await fetch(`http://localhost:5000/api/coupons/${id}`, {
+      const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/coupons/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

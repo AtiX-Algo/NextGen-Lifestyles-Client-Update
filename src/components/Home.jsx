@@ -30,7 +30,7 @@ const Home = () => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        let url = `http://localhost:5000/api/products?keyword=${keyword}`;
+        let url = `https://nextgen-lifestyles-server-update.onrender.com/api/products?keyword=${keyword}`;
         if (category) url += `&category=${category}`;
         if (priceRange) {
           if (priceRange === '200+') url += `&minPrice=200`;

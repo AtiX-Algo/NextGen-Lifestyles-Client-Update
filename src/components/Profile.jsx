@@ -64,7 +64,7 @@ const Profile = () => {
     if (file) formData.append("avatar", file);
 
     try {
-      const res = await fetch("http://localhost:5000/api/users/profile", {
+      const res = await fetch("https://nextgen-lifestyles-server-update.onrender.com/api/users/profile", {
         method: "PUT",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -95,7 +95,7 @@ const Profile = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/users/password", {
+      const res = await fetch("https://nextgen-lifestyles-server-update.onrender.com/api/users/password", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

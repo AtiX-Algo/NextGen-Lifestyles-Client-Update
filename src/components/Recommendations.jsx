@@ -25,8 +25,8 @@ const Recommendations = ({ currentProductId, category }) => {
     const fetchRecs = async () => {
       try {
         const url = category 
-          ? `http://localhost:5000/api/products/recommendations?productId=${currentProductId}&category=${category}`
-          : `http://localhost:5000/api/products/recommendations`;
+          ? `https://nextgen-lifestyles-server-update.onrender.com/api/products/recommendations?productId=${currentProductId}&category=${category}`
+          : `https://nextgen-lifestyles-server-update.onrender.com/api/products/recommendations`;
         
         const res = await fetch(url);
         const data = await res.json();

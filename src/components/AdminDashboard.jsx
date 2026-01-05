@@ -125,17 +125,17 @@ const AdminDashboard = () => {
       const headers = { Authorization: `Bearer ${token}` };
 
       if (users.length === 0 || activeTab === 'users' || activeTab === 'support') {
-        const res = await fetch('http://localhost:5000/api/users', { headers });
+        const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/users', { headers });
         if (res.ok) setUsers(await res.json());
       }
       if (activeTab === 'orders' || activeTab === 'overview' || activeTab === 'returns') {
         if (orders.length === 0) setLoading(true);
-        const res = await fetch('http://localhost:5000/api/orders', { headers });
+        const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/orders', { headers });
         if (res.ok) setOrders(await res.json());
       }
       if (activeTab === 'products' || activeTab === 'overview') {
         if (products.length === 0) setLoading(true);
-        const res = await fetch('http://localhost:5000/api/products');
+        const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/products');
         if (res.ok) setProducts(await res.json());
       }
     } catch (err) {
@@ -156,7 +156,7 @@ const AdminDashboard = () => {
   const handleRoleUpdate = async (userId, newRole) => {
     if(!window.confirm(`Make this user a ${newRole}?`)) return;
     try {
-        const res = await fetch(`http://localhost:5000/api/users/${userId}/role`, {
+        const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/users/${userId}/role`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
             body: JSON.stringify({ role: newRole })
@@ -169,7 +169,7 @@ const AdminDashboard = () => {
     const deliveryManId = assignments[orderId];
     if (!deliveryManId) return alert("Select a delivery man first");
     try {
-        const res = await fetch(`http://localhost:5000/api/orders/${orderId}/assign`, {
+        const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/orders/${orderId}/assign`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
             body: JSON.stringify({ deliveryManId })
@@ -186,7 +186,7 @@ const AdminDashboard = () => {
   const handleDeleteProduct = async (id) => {
     if (!window.confirm('Delete this product?')) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/products/${id}`, {
+      const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/products/${id}`, {
         method: 'DELETE', headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) fetchData();
@@ -200,8 +200,8 @@ const AdminDashboard = () => {
     if (uploadFile) data.append('image', uploadFile);
 
     const url = editMode 
-      ? `http://localhost:5000/api/products/${currentId}`
-      : `http://localhost:5000/api/products`;
+      ? `https://nextgen-lifestyles-server-update.onrender.com/api/products/${currentId}`
+      : `https://nextgen-lifestyles-server-update.onrender.com/api/products`;
     
     try {
       const res = await fetch(url, {
@@ -220,7 +220,7 @@ const AdminDashboard = () => {
 
   const handleAdminReturn = async (id, status) => {
     try {
-        const res = await fetch(`http://localhost:5000/api/orders/${id}/return-handle`, {
+        const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/orders/${id}/return-handle`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
             body: JSON.stringify({ status })

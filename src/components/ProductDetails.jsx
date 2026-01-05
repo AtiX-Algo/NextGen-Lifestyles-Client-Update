@@ -36,7 +36,7 @@ const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const res = await fetch(`http://localhost:5000/api/products/${id}`);
+        const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/products/${id}`);
         const data = await res.json();
         setProduct(data);
         // Pre-select first option if available for better UX
@@ -69,7 +69,7 @@ const ProductDetails = () => {
     if (!token) return navigate('/login');
 
     try {
-      const res = await fetch("http://localhost:5000/api/users/wishlist", {
+      const res = await fetch("https://nextgen-lifestyles-server-update.onrender.com/api/users/wishlist", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const ProductDetails = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/products/${id}/reviews`,
+        `https://nextgen-lifestyles-server-update.onrender.com/api/products/${id}/reviews`,
         {
           method: "POST",
           headers: {
@@ -109,7 +109,7 @@ const ProductDetails = () => {
       if (res.ok) {
         setComment("");
         setRating(5);
-        const refreshed = await fetch(`http://localhost:5000/api/products/${id}`);
+        const refreshed = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/products/${id}`);
         const refreshedData = await refreshed.json();
         setProduct(refreshedData);
       } else {

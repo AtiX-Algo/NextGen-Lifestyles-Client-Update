@@ -9,7 +9,7 @@ const Wishlist = () => {
   // Fetch Wishlist
   const fetchWishlist = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/users/wishlist", {
+      const res = await fetch("https://nextgen-lifestyles-server-update.onrender.com/api/users/wishlist", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -30,7 +30,7 @@ const Wishlist = () => {
   // Remove Item
   const removeFromWishlist = async (productId) => {
     try {
-      const res = await fetch("http://localhost:5000/api/users/wishlist", {
+      const res = await fetch("https://nextgen-lifestyles-server-update.onrender.com/api/users/wishlist", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

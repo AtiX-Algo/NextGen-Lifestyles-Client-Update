@@ -25,7 +25,7 @@ const Cart = () => {
     setLoading(true);
 
     try {
-        const res = await fetch('http://localhost:5000/api/coupons/validate', {
+        const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/coupons/validate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ code: couponCode, cartTotal: totalPrice })

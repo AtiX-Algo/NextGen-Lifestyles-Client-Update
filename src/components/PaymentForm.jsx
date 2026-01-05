@@ -38,7 +38,7 @@ const CheckoutForm = ({ amount, orderId }) => {
   const markOrderAsPaid = async (paymentId) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/orders/${orderId}/pay`, {
+      const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/orders/${orderId}/pay`, {
         method: 'PUT',
         headers: { 
            'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ const PaymentForm = () => {
 
     const token = localStorage.getItem('token');
     
-    fetch('http://localhost:5000/api/payment/create-intent', {
+    fetch('https://nextgen-lifestyles-server-update.onrender.com/api/payment/create-intent', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',

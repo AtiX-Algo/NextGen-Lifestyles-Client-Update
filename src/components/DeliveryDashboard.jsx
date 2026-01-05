@@ -22,7 +22,7 @@ const DeliveryDashboard = () => {
   // 2. Fetch Assigned Tasks
   const fetchTasks = async () => {
     try {
-        const res = await fetch('http://localhost:5000/api/orders/delivery/my-tasks', {
+        const res = await fetch('https://nextgen-lifestyles-server-update.onrender.com/api/orders/delivery/my-tasks', {
             headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
@@ -37,7 +37,7 @@ const DeliveryDashboard = () => {
   // 3. Update Order Status
   const updateStatus = async (id, status) => {
     try {
-        const res = await fetch(`http://localhost:5000/api/orders/${id}/status`, {
+        const res = await fetch(`https://nextgen-lifestyles-server-update.onrender.com/api/orders/${id}/status`, {
             method: 'PUT',
             headers: { 
                 'Content-Type': 'application/json',
