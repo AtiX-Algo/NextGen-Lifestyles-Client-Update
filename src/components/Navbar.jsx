@@ -44,7 +44,7 @@ const Navbar = () => {
         {/* 2. Logo */}
         <div className="flex-1 lg:flex-none flex justify-center lg:justify-start">
           <Link to="/" className="text-2xl font-serif font-bold text-[#1a1a1a] tracking-tight">
-            NextGen<span className="text-[#D96C46]">.</span>
+            NextGen LiyeStyle<span className="text-[#D96C46]">.</span>
           </Link>
         </div>
 
