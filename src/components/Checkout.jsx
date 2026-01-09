@@ -218,7 +218,7 @@ const Checkout = () => {
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 bg-[#FAF9F6] rounded-md overflow-hidden flex items-center justify-center">
                                      <img 
-                                        src={item.images?.[0] ? (item.images[0].startsWith('http') ? item.images[0] : `http://localhost:5000${item.images[0]}`) : ''} 
+                                        src={item.images?.[0] ? (item.images[0].startsWith('http') ? item.images[0] : `https://nextgen-lifestyles-server-update.onrender.com${item.images[0]}`) : ''} 
                                         alt="" 
                                         className="w-full h-full object-contain"
                                      />

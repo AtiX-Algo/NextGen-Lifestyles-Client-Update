@@ -77,7 +77,7 @@ const AdminDashboard = () => {
     if (!user || user.role !== 'admin') return;
 
     if (socket.current) socket.current.disconnect();
-    socket.current = io('http://localhost:5000');
+    socket.current = io('https://nextgen-lifestyles-server-update.onrender.com');
 
     socket.current.on('connect', () => {
       console.log('Admin connected to socket');

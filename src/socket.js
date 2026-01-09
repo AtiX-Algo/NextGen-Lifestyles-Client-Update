@@ -1,10 +1,14 @@
 // src/socket.js
-import io from 'socket.io-client';
+import { io } from "socket.io-client";
 
-// Connect to your backend URL
-const socket = io("http://localhost:5000", {
-    withCredentials: true,
-    autoConnect: true
+const SOCKET_URL = import.meta.env.PROD
+  ? "https://nextgen-lifestyles-server-update.onrender.com"
+  : "https://nextgen-lifestyles-server-update.onrender.com";
+
+const socket = io(SOCKET_URL, {
+  withCredentials: true,
+  transports: ["websocket", "polling"],
+  autoConnect: true,
 });
 
 export default socket;

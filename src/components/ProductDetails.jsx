@@ -24,10 +24,10 @@ const ProductDetails = () => {
 
   const getProductImage = (prod) => {
     if (prod.images && prod.images[0]) {
-      return prod.images[0].startsWith("http") ? prod.images[0] : `http://localhost:5000${prod.images[0]}`;
+      return prod.images[0].startsWith("http") ? prod.images[0] : `https://nextgen-lifestyles-server-update.onrender.com${prod.images[0]}`;
     }
     if (prod.image) {
-      return prod.image.startsWith("http") ? prod.image : `http://localhost:5000${prod.image}`;
+      return prod.image.startsWith("http") ? prod.image : `https://nextgen-lifestyles-server-update.onrender.com${prod.image}`;
     }
     return "https://placehold.co/600x800"; 
   };

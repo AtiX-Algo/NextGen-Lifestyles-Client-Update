@@ -369,7 +369,7 @@ const OrderTracking = () => {
                                             <div className="flex items-center gap-3">
                                                 <div className="w-10 h-10 bg-gray-50 rounded overflow-hidden">
                                                     <img 
-                                                        src={item.image?.startsWith('http') ? item.image : `http://localhost:5000${item.image}`} 
+                                                        src={item.image?.startsWith('http') ? item.image : `https://nextgen-lifestyles-server-update.onrender.com${item.image}`} 
                                                         alt={item.name} 
                                                         className="w-full h-full object-contain"
                                                     />

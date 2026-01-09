@@ -91,7 +91,7 @@ const Cart = () => {
                   <img 
                     src={
                         item.images && item.images[0] 
-                        ? (item.images[0].startsWith('http') ? item.images[0] : `http://localhost:5000${item.images[0]}`) 
+                        ? (item.images[0].startsWith('http') ? item.images[0] : `https://nextgen-lifestyles-server-update.onrender.com${item.images[0]}`) 
                         : "https://placehold.co/150"
                     } 
                     alt={item.name} 
