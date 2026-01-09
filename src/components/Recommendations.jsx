@@ -10,12 +10,12 @@ const Recommendations = ({ currentProductId, category }) => {
     if (prod.image) {
       return prod.image.startsWith('http') 
         ? prod.image 
-        : `https://nextgen-lifestyles-server-update.onrender.com${prod.image}`;
+        : `http://localhost:5000${prod.image}`;
     }
     if (prod.images && prod.images[0]) {
       return prod.images[0].startsWith('http') 
         ? prod.images[0] 
-        : `https://nextgen-lifestyles-server-update.onrender.com${prod.images[0]}`;
+        : `http://localhost:5000${prod.images[0]}`;
     }
     // Fallback placeholder
     return "https://placehold.co/400";

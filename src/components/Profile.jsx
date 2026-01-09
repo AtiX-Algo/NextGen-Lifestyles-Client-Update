@@ -120,7 +120,7 @@ const Profile = () => {
   // Helper for Avatar URL
   const getAvatarUrl = () => {
       if (preview) return preview;
-      if (user.avatar) return user.avatar.startsWith('http') ? user.avatar : `https://nextgen-lifestyles-server-update.onrender.com${user.avatar}`;
+      if (user.avatar) return user.avatar.startsWith('http') ? user.avatar : `http://localhost:5000${user.avatar}`;
       return null;
   };
 

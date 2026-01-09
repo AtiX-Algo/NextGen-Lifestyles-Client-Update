@@ -77,7 +77,7 @@ const Dashboard = () => {
                         <img 
                             src={
                                 user.avatar 
-                                ? (user.avatar.startsWith('http') ? user.avatar : `https://nextgen-lifestyles-server-update.onrender.com${user.avatar}`) 
+                                ? (user.avatar.startsWith('http') ? user.avatar : `http://localhost:5000${user.avatar}`) 
                                 : "https://placehold.co/150"
                             } 
                             alt="avatar" 

@@ -235,7 +235,7 @@ const Home = () => {
                       </button>
                       
                       <img
-                        src={product.images?.[0] ? `https://nextgen-lifestyles-server-update.onrender.com${product.images[0]}` : 'https://placehold.co/400x600/e0e0e0/808080?text=Product'}
+                        src={product.images?.[0] ? `http://localhost:5000${product.images[0]}` : 'https://placehold.co/400x600/e0e0e0/808080?text=Product'}
                         alt={product.name}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                       />

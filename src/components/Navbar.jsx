@@ -93,7 +93,7 @@ const Navbar = () => {
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar placeholder">
                 <div className="bg-[#FAF9F6] text-[#D96C46] rounded-full w-10 h-10 flex items-center justify-center border border-gray-100 hover:border-[#D96C46] transition-colors">
                   {user.avatar ? (
-                     <img src={user.avatar.startsWith('http') ? user.avatar : `https://nextgen-lifestyles-server-update.onrender.com${user.avatar}`} alt="avatar" />
+                     <img src={user.avatar.startsWith('http') ? user.avatar : `http://localhost:5000${user.avatar}`} alt="avatar" />
                   ) : (
                      <span className="text-lg font-serif font-bold">{user.name?.charAt(0).toUpperCase()}</span>
                   )}
@@ -154,7 +154,7 @@ const Navbar = () => {
                <div className="flex items-center gap-4 mb-4 pb-4 border-b border-gray-50">
                   <div className="w-12 h-12 bg-[#FAF9F6] rounded-full flex items-center justify-center text-[#D96C46] font-serif font-bold text-xl border border-gray-100">
                     {user.avatar ? (
-                       <img src={user.avatar.startsWith('http') ? user.avatar : `https://nextgen-lifestyles-server-update.onrender.com${user.avatar}`} alt="avatar" className="w-full h-full object-cover rounded-full" />
+                       <img src={user.avatar.startsWith('http') ? user.avatar : `http://localhost:5000${user.avatar}`} alt="avatar" className="w-full h-full object-cover rounded-full" />
                     ) : (
                        user.name?.charAt(0).toUpperCase()
                     )}
